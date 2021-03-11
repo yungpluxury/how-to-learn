@@ -1,3 +1,14 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -18,7 +29,7 @@
   flex-direction: column;
   justify-content: space-around;
   position: relative;
-  /* выше установили ограничения для секции */
+  overflow: hidden;
 }
 
 .header__main-illustration {
@@ -67,6 +78,10 @@
   right: 0px;
   top: 64px;
   z-index: 1;
+}
+
+.rotation {
+  animation: rotation 20s linear infinite;
 }
 
 .logo {
@@ -140,7 +155,8 @@
 
 
 .digits {
-  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -213,9 +229,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: 100px;
   background-color: #f2f2f2;
-  padding-top: 100px;
+  padding-top: 80px;
 }
 
 .feynman__image {
@@ -373,5 +388,194 @@
   line-height: 30px;
   font-weight: normal;
   text-decoration: none;
+}
 
+.techniques {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.cards {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding-left: 0;
+  width: 920px;
+}
+
+.cards__item {
+  width: 240px;
+  margin-top: 60px;
+  list-style-type: none;
+  margin-right: 100px;
+}
+
+.cards__item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 80px;
+  margin-bottom: 43px;
+}
+
+.cards__title {
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: bold;
+}
+
+.cards__description {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: normal;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  justify-content: center;
+  margin-bottom: -50px;
+}
+
+.video__iframes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.video__iframe {
+  margin-right: 20px;
+}
+
+.video__iframe:nth-child(2n) {
+  margin-right: 0;
+}
+
+.oakley {
+  background-color: #f2f2f2;
+  padding-top: 160px;
+}
+
+.khan {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  width: 80%;
+  margin-bottom: 0;
+}
+
+.khan__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.khan__author {
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: normal;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.khan__title {
+  font-size: 60px;
+  line-height: 1.15;
+  font-weight: bold;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.khan__quote {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: normal;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
+.khan__quote-author {
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: bold;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.khan__quote-author-subline {
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: normal;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 68px;
+}
+
+.khan__book-container {
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 0;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 48px;
+}
+
+.khan__buy-link {
+  font-size: 30px;
+  line-height: 42px;
+  font-weight: normal;
+  color: #2f80ed;
+  display: flex;
+  margin-top: 0;
+}
+
+.resourses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 217px;
+  align-items: center;
+}
+
+.resourses__logo-zone {
+  display: flex;
+  margin-top: 80px;
+  margin-bottom: 0;
+  width: 1100px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.resourses__logo {
+  display: flex;
+  width: 270px;
+  height: 38px;
 }
