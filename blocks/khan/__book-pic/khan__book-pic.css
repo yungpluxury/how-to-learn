@@ -4,4 +4,6 @@
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 48px;
+  object-fit: none;
+  object-position: top left;
 }
